@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img"
+     aria-label="Abstract graph-of-ideas motif: connected nodes representing inspectable intelligent systems.">
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#7c4dff" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#7c4dff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7c4dff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#38e8d4" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#38e8d4" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#38e8d4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#7c4dff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#38e8d4" stop-opacity="0.4"/>
+    </linearGradient>
+    <style>
+      .node        { fill: #0c1226; stroke: #7c4dff; stroke-width: 1.4; }
+      .node-cyan   { fill: #0c1226; stroke: #38e8d4; stroke-width: 1.4; }
+      .node-soft   { fill: #0c1226; stroke: rgba(255,255,255,0.18); stroke-width: 1; }
+      .edge-line   { stroke: url(#edge); stroke-width: 1; fill: none; opacity: 0.65; }
+      .edge-soft   { stroke: rgba(255,255,255,0.10); stroke-width: 1; fill: none; }
+      .label       { font-family: ui-monospace, "JetBrains Mono", monospace; font-size: 9px; fill: #7d8aab; letter-spacing: 0.06em; }
+      .pulse       { transform-origin: center; transform-box: fill-box; }
+      @media (prefers-reduced-motion: no-preference) {
+        .pulse { animation: pulse 4.2s ease-in-out infinite; }
+        @keyframes pulse {
+          0%,100% { opacity: 0.4; transform: scale(0.92); }
+          50%     { opacity: 1;   transform: scale(1.06); }
+        }
+        .is-active { animation: pulse 3.6s ease-in-out infinite; }
+        .drift     { animation: drift 14s ease-in-out infinite; }
+        @keyframes drift {
+          0%,100% { transform: translate(0,0); }
+          50%     { transform: translate(1.5px,-1.5px); }
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Ambient halos -->
+  <circle cx="320" cy="160" r="200" fill="url(#halo)"/>
+  <circle cx="140" cy="330" r="160" fill="url(#halo-cyan)"/>
+
+  <!-- Faint outer ring -->
+  <circle cx="240" cy="240" r="210" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <circle cx="240" cy="240" r="150" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="2 6"/>
+
+  <!-- Edges (graph connections) -->
+  <g class="drift">
+    <path class="edge-line" d="M120,160 L200,140 L260,220 L360,180"/>
+    <path class="edge-line" d="M120,160 L180,260 L260,220"/>
+    <path class="edge-line" d="M260,220 L300,330 L200,360 L180,260"/>
+    <path class="edge-line" d="M360,180 L400,280 L300,330"/>
+    <path class="edge-soft" d="M80,260 L120,160"/>
+    <path class="edge-soft" d="M200,140 L260,80 L360,90 L360,180"/>
+    <path class="edge-soft" d="M400,280 L420,360 L300,330"/>
+    <path class="edge-soft" d="M200,360 L120,400 L80,260"/>
+  </g>
+
+  <!-- Nodes -->
+  <g>
+    <!-- soft outer nodes -->
+    <circle class="node-soft" cx="80"  cy="260" r="6"/>
+    <circle class="node-soft" cx="260" cy="80"  r="5"/>
+    <circle class="node-soft" cx="360" cy="90"  r="6"/>
+    <circle class="node-soft" cx="420" cy="360" r="5"/>
+    <circle class="node-soft" cx="120" cy="400" r="5"/>
+
+    <!-- violet nodes -->
+    <circle class="node" data-node="1" cx="120" cy="160" r="9"/>
+    <circle class="node" data-node="1" cx="200" cy="140" r="7"/>
+    <circle class="node" data-node="1" cx="360" cy="180" r="9"/>
+    <circle class="node" data-node="1" cx="180" cy="260" r="7"/>
+    <circle class="node" data-node="1" cx="400" cy="280" r="7"/>
+
+    <!-- cyan accent nodes -->
+    <circle class="node-cyan pulse" data-node="1" cx="260" cy="220" r="11"/>
+    <circle class="node-cyan"       data-node="1" cx="300" cy="330" r="8"/>
+    <circle class="node-cyan"       data-node="1" cx="200" cy="360" r="7"/>
+
+    <!-- inner inspectable "core" -->
+    <circle cx="260" cy="220" r="2.5" fill="#38e8d4"/>
+  </g>
+
+  <!-- Subtle coordinate labels (purely decorative; hidden from AT by parent role+label) -->
+  <text class="label" x="132" y="156">Q-01</text>
+  <text class="label" x="212" y="136">S-02</text>
+  <text class="label" x="372" y="176">E-03</text>
+  <text class="label" x="272" y="216">core</text>
+  <text class="label" x="312" y="326">R-04</text>
+  <text class="label" x="192" y="376">V-05</text>
+</svg>

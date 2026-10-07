@@ -1,0 +1,5 @@
+# robots.txt for https://modarresi1913.github.io/
+User-agent: *
+Allow: /
+
+Sitemap: https://modarresi1913.github.io/sitemap.xml
