@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="0.6">
+  <!-- The Seed: a minimal geometric form representing possibility before construction -->
+  <!-- Default state: stable (a single dot within a circle) -->
+  <circle cx="60" cy="60" r="1" fill="currentColor" stroke="none"/>
+  <circle cx="60" cy="60" r="20"/>
+  <!-- Subtle crosshairs suggesting it is a coordinate, not decoration -->
+  <line x1="60" y1="30" x2="60" y2="38" opacity="0.4"/>
+  <line x1="60" y1="82" x2="60" y2="90" opacity="0.4"/>
+  <line x1="30" y1="60" x2="38" y2="60" opacity="0.4"/>
+  <line x1="82" y1="60" x2="90" y2="60" opacity="0.4"/>
+</svg>
